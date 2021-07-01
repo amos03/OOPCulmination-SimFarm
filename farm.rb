@@ -1,4 +1,6 @@
 class farm
+@@food_harvested=0
+
 
 def self.harvest
 end
@@ -8,6 +10,7 @@ def self.display_status
 end
 
 def self.relax
+    # vista strings that incorporate references to all field instances
 end
 
 end
