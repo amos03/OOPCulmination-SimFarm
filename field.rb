@@ -31,6 +31,7 @@ attr_reader :field_type, :field_size
             end
         end
         @@food_harvested+= @@corn_hectares*20 + @@wheat_hectares*30
+        puts "The farm has #{@@food_harvested} units harvested food thus far."
     end
     
     def self.display_status
@@ -38,11 +39,23 @@ attr_reader :field_type, :field_size
             puts ""
             puts "A #{field.field_type} field is #{field.field_size} hectares."
         end
+        puts ""
         puts "The farm has #{@@food_harvested} units of harvested food thus far."
     # display # of hectares of each field, i.e., each instance of field
     end
     
     def self.relax
-        # vista strings that incorporate references to all field instances
+        if @@corn_hectares > 0 && @@wheat_hectares>0
+            puts "A trail shrouded in the morning's fog leads your gaze through your #{@@corn_hectares} hectares of corn. "
+            puts "Golden sheaves sway in the cooling breeze caressing your #{@@wheat_hectares} hectares of wheat."
+        elsif @@wheat_hectares >0
+            puts "Golden sheaves sway in the cooling breeze caressing your #{@@wheat_hectares} hectares of wheat."
+        elsif @@corn_hectares > 0
+            puts "A trail shrouded in the morning's fog leads your gaze through your #{@@corn_hectares} hectares of corn. "
+        else
+            puts "This is your land to cultivate - may it sprout forth sustenance and delight your senses."
+        end
+            # vista strings that incorporate references to all field instances
+
     end
 end

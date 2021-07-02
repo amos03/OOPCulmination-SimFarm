@@ -50,7 +50,7 @@ def add_field
 end
 
 def harvest_field
-Field.harvest
+    Field.harvest
 end
 
 def status
@@ -58,6 +58,7 @@ def status
 end
 
 def relax
+    Field.relax
 end
 
 end
