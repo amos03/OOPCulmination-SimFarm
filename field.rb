@@ -24,4 +24,4 @@ class Field
     def self.relax
         # vista strings that incorporate references to all field instances
     end
-    
+end
