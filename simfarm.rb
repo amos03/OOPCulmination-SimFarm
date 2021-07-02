@@ -42,7 +42,7 @@ def add_field
     type = gets.chomp
     
     puts "How many hectares should this field be?"
-    hectares = gets.chomp.to_f
+    hectares = gets.chomp.to_i
 
     Field.create(type,hectares)
 
@@ -50,9 +50,11 @@ def add_field
 end
 
 def harvest_field
+Field.harvest
 end
 
 def status
+    Field.display_status
 end
 
 def relax
