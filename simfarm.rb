@@ -1,4 +1,6 @@
-class Main
+require_relative 'field'
+
+class SimFarm
     def initialize(name)
         @name=name
     end
@@ -31,6 +33,15 @@ class Main
     end
 
 def add_field
+    
+    puts "What kind of field would you like to add? Corn or wheat?"
+    type = gets.chomp
+    
+    puts "How many hectares should this field be?"
+    hectares = gets.chomp.to_f
+
+    Field.create(type,hectares)
+
 end
 
 def harvest_field
@@ -43,3 +54,6 @@ def relax
 end
 
 end
+
+a_simfarm_app=SimFarm.new
+a_simfarm_app.main_menu

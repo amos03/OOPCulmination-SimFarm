@@ -6,7 +6,12 @@ class Field
     def initialize(type,size)
         @field_type=type
         @field_size=size
-        @@fields << self
+    end
+
+    def self.create(type,size)
+        new_field=Field.new(type,size)
+        @@fields << new_field
+        return new_field
     end
 
     def self.harvest
